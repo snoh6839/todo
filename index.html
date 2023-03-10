@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>What's up today?</title>
+  <link rel="icon" href="favicon.ico">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&family=Montserrat:wght@300;400;500&family=Gugi&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+  <link rel="stylesheet" href="./css/initial.min.css">
+  <link rel="stylesheet" href="./css/animation.css">
+  <link rel="stylesheet" href="./css/main.css">
+  <link rel="stylesheet" href="./css/lunchmenu.css">
+  <link rel="stylesheet" href="./css/stopWatch.css">
+  <link rel="stylesheet" href="./css/typeTest.css">
+  <link rel="stylesheet" href="./css/quotes.css">
+  <link rel="stylesheet" href="./css/catsPhoto.css">
+  <script defer type="text/javascript" src="./js/data.js"></script>
+  <script defer type="text/javascript" src="./js/start.js"></script>
+  <script defer type="text/javascript" src="./js/todos.js"></script>
+  <script defer type="text/javascript" src="./js/clock.js"></script>
+  <script defer type="text/javascript" src="./js/lunchmenu.js"></script>
+  <script defer type="text/javascript" src="./js/stopWatch.js"></script>
+  <script defer type="text/javascript" src="./js/typeTest.js"></script>
+  <script defer type="text/javascript" src="./js/quotes.js"></script>
+  <script defer type="text/javascript" src="./js/catsPhoto.js"></script>
+</head>
+<body>
+    <div class="container">
+      <div id="main">
+        <header id="header">
+          <ul id="gnb">
+            <li class="liClick">
+              <a href="#home" class="aClick"><span class="material-symbols-outlined spanClick">Home</span>Home</a>
+            </li>
+            <li>
+              <a href="#lunchMenu"><span class="material-symbols-outlined">restaurant</span>Lunch menu</a>
+            </li>
+            <li>
+              <a href="#stopWatch"><span class="material-symbols-outlined">timer</span>Stop Watch</a>
+            </li>
+            <li>
+              <a href="#typeTest"><span class="material-symbols-outlined">quiz</span>Type Test</a>
+            </li>
+            <li>
+              <a href="#lifeQuotes"><span class="material-symbols-outlined">menu_book</span>Life Quotes</a>
+            </li>
+            <li>
+              <a href="#catsPhoto"><span class="material-symbols-outlined">pets</span>Cats Photo</a>
+            </li>
+          </ul>
+          <ul id="sns">
+            <li><a href="https://www.naver.com/" target="_blank"><img src="./img/logo-naver.png" alt="naver"></a></li>
+            <li><a href="https://www.google.co.kr/" target="_blank"><img src="./img/logo-google.png" alt="google"></a></li>
+            <li><a href="https://www.instagram.com/" target="_blank"><img src="./img/logo-instagram.png" alt="instagram"></a></li>
+            <li><a href="https://ko-kr.facebook.com/" target="_blank"><img src="./img/logo-facebook.png" alt="facebook"></a></li>
+          </ul>
+        </header>
+        <div id="home">
+          <section class="todos">
+            <article class="todoInput">
+              <form>
+                <input type="text" placeholder="Write a To Do and Press Enter Key." onfocus="this.placeholder=''" onblur="this.placeholder='Write a To Do and Press Enter Key.'">
+              </form>
+            </article>
+            <article class="todoList">
+              <h3>To Do List</h3>
+              <ul></ul>
+            </article>
+          </section>
+          <section class="clock">
+            <h3></h3>
+            <p></p>
+          </section>
+          <section class="music">
+            <div class="music-inner">
+              <div class="music-top">
+                <h3>Now Playing</h3>
+              </div>
+              <div class="music-img">
+                <img src="./img/music-1.jpg" alt="이미지1">
+              </div>
+              <div class="music-song">
+                <p class="name">aaa</p>
+                <p class="artist">aaa</p>
+              </div>
+              <div class="music-progress">
+                <div class="bar">
+                  <audio src="" id="main-audio"></audio>
+                </div>
+                <div class="timer">
+                  <span class="current">0:00</span>
+                  <span class="duration">0:00</span>
+                </div>
+              </div>
+              <div class="music-control">
+                <span id="control-repeat" class="material-symbols-outlined" title="전체반복">repeat</span>
+                <span id="control-prev" class="material-symbols-outlined" title="이전곡">skip_previous</span>
+                <div class="play-pause">
+                  <span id="control-play" class="material-symbols-outlined" title="재생">play_circle</span>
+                  <!-- <span class="material-symbols-outlined">pause_circle</span> -->
+                </div>
+                <span id="control-next" class="material-symbols-outlined" title="다음곡">skip_next</span>
+                <span id="control-list" class="material-symbols-outlined" title="재생목록">queue_music</span>
+              </div>
+              <div class="music-list">
+                <div class="title">
+                  <div>
+                    <span class="material-symbols-outlined">queue_music</span>
+                    <span>Music List</span>
+                  </div>
+                  <span class="material-symbols-outlined close">close</span>
+                </div>
+                <div class="list">
+                  <ul>
+
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+
+        <div id="lunchMenu" class="hidden">
+          <section class="menu">
+            <article class="menuTitle">
+              <p>Today's Lunch Menu</p>
+            </article>
+            <article class="menuText">
+              <h3></h3>
+            </article>
+          </section>
+          <section class="menuBtns">
+            <article class="korFoodBtn">
+              <p>한식[click]</p>
+            </article>
+            <article class="chiFoodBtn">
+              <p>중식[click]</p>
+            </article>
+            <article class="japFoodBtn">
+              <p>일식[click]</p>
+            </article>
+            <article class="wesFoodBtn">
+              <p>양식[click]</p>
+            </article>
+          </section>
+        </div>
+
+        <div id="stopWatch" class="hidden">
+          <section class="stopWatch-txt">
+            <p></p>
+          </section>
+          <section class="stopWatch-btns">
+            <article class="play"><span class="material-symbols-outlined">play_arrow</span></article>
+            <article class="pause"><span class="material-symbols-outlined">pause</span></article>
+            <article class="reset"><span class="material-symbols-outlined">replay</span></article>
+          </section>
+
+        </div>
+
+        <div id="typeTest" class="hidden">
+          <section class="typeTest-txt">
+            <h3>재미로 보는 간단한 심리테스트</h3>
+            <p>당신은 여자(남자)친구와 동물원에 놀러갔습니다.<br>많은 동물들을 관람하면서<br>당신은 여자(남자)친구와 함께 기념촬영을 하려고 합니다.<br>다음 중 어느 동물 앞에서 기념촬영을 하겠습니까?</p>
+          </section>
+          <section class="typeTest-btns">
+            <article class="lion">
+              <p>a. 사자</p>
+            </article>
+            <article class="fox">
+              <p>b. 여우</p>
+            </article>
+            <article class="rabbit">
+              <p>c. 토끼</p>
+            </article>
+            <article class="seal">
+              <p>d. 물개</p>
+            </article>
+          </section>
+
+        </div>
+
+        <div id="lifeQuotes" class="hidden">
+          <section class="lifeQuotes-txt">
+            <h4></h4>
+            <p></p>
+          </section>
+          <section class="lifeQuotes-btn">
+            <article class="randomBtn">
+              <p>다른 명언 보기[click]</p>
+            </article>
+          </section>
+
+        </div>
+
+        <div id="catsPhoto" class="hidden">
+          <section class="catsPhoto-img">
+            <img>
+          </section>
+          <section class="catsPhoto-btn">
+            <article class="randomBtn">
+              <p>다른 사진 보기[click]</p>
+            </article>
+          </section>
+        </div>
+      </div>
+    </div>
+</body>
+</html>

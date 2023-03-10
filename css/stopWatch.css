@@ -1,0 +1,62 @@
+@charset "UTF-8";
+
+#stopWatch {
+  width: 77%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.stopWatch-txt {
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 30px;
+  height: 70%;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(255,255,255,0.4);
+  border-left: 1px solid rgba(255, 255, 255, 0.3);
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 5px 5px 10px -3px rgba(0, 0, 0, 0.1);
+}
+
+.stopWatch-txt p {
+  font-size: 50px;
+}
+
+.stopWatch-btns {
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 30px;
+  height: 15%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.stopWatch-btns article {
+  width: 30%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20px;
+  background-color: rgba(152,120,249,0.4);
+  border-left: 1px solid rgba(255, 255, 255, 0.3);
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 5px 5px 10px -3px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.stopWatch-btns article:hover {
+  background-color: rgba(152,120,249,0.2);
+  transform: scale(0.95);
+}
+
+.stopWatch-btns article span {
+  font-size: 50px;
+  color: #ffffff;
+}
